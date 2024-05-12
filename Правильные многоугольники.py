@@ -7,8 +7,8 @@ class MyImageDraw(ImageDraw):
         points = []
         angle = -math.degrees(rotation)
         while angle < 360 - math.degrees(rotation):
-            points.append((int(-math.sin(math.radians(angle)) * radius + center_coords[0]),
-                           int(-math.cos(math.radians(angle)) * radius + center_coords[1])))
+            points.append((int(math.sin(math.radians(angle)) * radius + center_coords[0]),
+                           int(math.cos(math.radians(angle)) * radius + center_coords[1])))
             angle += 360 / sides
         self.polygon(points, fill, outline)
 
